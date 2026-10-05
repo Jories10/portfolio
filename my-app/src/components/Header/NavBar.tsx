@@ -16,8 +16,8 @@ export default function NavBar(){
           sm:static sm:max-h-none sm:block sm:w-auto sm:border-0 sm:px-0
           text-sm bg-white tracking-wide
         `}>
-            <ul className={`${isOpenNav ? "flex flex-col justify-center sm:flex-row items-start gap-4 h-auto": "flex items-center gap-4 h-auto"}`}>
-                <li className={navItemClass}>
+            <ul className={`${isOpenNav ? "flex flex-col justify-center sm:flex-row items-start gap-4 h-auto mt-3": "flex items-center  gap-4 h-auto"} sm:items-center sm:mt-0`}>
+                <li className={`${navItemClass}`}>
                     <a href="#home">Home</a>
                 </li>
                 <li className={navItemClass}>
@@ -33,7 +33,12 @@ export default function NavBar(){
                     <a href="#contact">Contact</a>
                 </li>
                 <li className="text-gray-950 border border-gray-950 py-3 px-5 pointer hover:bg-gray-950 hover:text-gray-50 transition-colors ease-linear duration-200 pointer">
-                    <DownloadResumButton content="Resume"/>
+                    <DownloadResumButton content={
+                       <>
+                        <span className="sm:hidden">Download Resume</span>
+                        <span className="hidden sm:inline">Resume</span>
+                       </>
+                    }/>
                 </li>
             </ul>
         </nav>

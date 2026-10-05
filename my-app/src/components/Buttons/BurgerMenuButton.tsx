@@ -13,7 +13,7 @@ function BurgerMenuButton({isOpenNav, setIsOpenNav}:burgerMenuButtonTypes){
     }
     return(
         <button type="button" aria-label="" className="block sm:hidden cursor-pointer outline-0" onClick={handleClick}>
-            <img src={isOpenNav ? closeBurgerButton : burgerMenuButton} alt="Burger Icon" className="w-5"/>
+            <img src={isOpenNav ? closeBurgerButton : burgerMenuButton} alt={isOpenNav ? "Close Burger Button" : "Hamburger Menu"} className="w-5"/>
         </button>
     )
 }
