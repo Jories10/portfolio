@@ -3,7 +3,7 @@ import Main from "./sections/Main";
 
 function App(){
   return(
-    <div className="px-6 md:px-18 lg:px-56">
+    <div>
         <Header/> 
         <Main/>
     </div>
