@@ -32,7 +32,7 @@ export default function NavBar(){
                 <li className={navItemClass}>
                     <a href="#contact">Contact</a>
                 </li>
-                <li className="xs:w-full text-gray-950 border border-gray-950 py-3 px-5 pointer hover:bg-gray-950 hover:text-gray-50 transition-colors ease-linear duration-200 pointer">
+                <li>
                     <DownloadResumButton content={
                        <>
                         <span className="sm:hidden">Download Resume</span>
