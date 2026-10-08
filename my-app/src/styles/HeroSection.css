@@ -3,3 +3,10 @@
 #available-opportunity {
     font-family: 'JetBrains Mono', monospace;
 }
+
+#tech-stack {
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.3em;
+    font-weight:600;
+}

@@ -14,7 +14,7 @@ export default function NavBar(){
           ${isOpenNav ? "max-h-96 block" : "max-h-0 hidden"}
           absolute top-full left-0 w-full px-5 py-3 border-t border-gray-300
           sm:static sm:max-h-none sm:block sm:w-auto sm:border-0 sm:px-0
-          text-sm bg-white tracking-wide overflow-hidden
+          text-sm bg-white tracking-wide overflow-hidden z-10
         `}>
             <ul className={`${isOpenNav ? "flex flex-col justify-center sm:flex-row items-start gap-4 h-auto mt-3": "none  gap-4 h-auto"} sm:flex sm:items-center sm:mt-0 overflow-hidden`}>
                 <li className={`${navItemClass}`}>
