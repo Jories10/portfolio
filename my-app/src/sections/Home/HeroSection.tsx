@@ -5,7 +5,7 @@ function Herosection() {
 
     return (
         <section id="home">
-            <div className="relative px-8 pt-24 pb-0 lg:mx-14 xl:mx-50">
+            <div className="relative px-8 pt-40 pb-0 lg:mx-14 xl:mx-50">
                 <div>
                     <p id="available-opportunity" className="uppercase text-gray-400 text-xs tracking-widest  ">available for opportunities</p>
                     <p className="flex items-center gap-2 capitalize text-[0.8rem] mt-3 text-gray-500"><span className="w-1.5 h-1.5 rounded-full bg-black"></span> junior frontend developer</p>
