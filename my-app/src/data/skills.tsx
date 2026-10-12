@@ -1,31 +1,34 @@
 type Skill = {
-    name:string,
-    category:string
+    skills:{
+        header:string,
+        name:string[],
+        category:string
+    },
+    reactDevelopment:{
+        header:string,
+        react:string[]
+    },
+    developmentPractices:{
+        header:string,
+        practices:string[]
+    }
+
 }
 
-export const skills: Skill[] = [
-    {
-        name:"HTML5",
+export const skillsDetails: Skill[] = [
+   {
+    skills:{
+        header:"Frontend",
+        name:["HTML5","CSS3","JavaScipt","React","TypeScript","Tailwind","Bootstrap"],
         category:"Frontend"
     },
-    {
-        name:"CSS3",
-        category:"Frontend"
+    reactDevelopment:{
+        header:"React & Development",
+        react:["React Hooks","Functional Components","Props & State","Component Composition","Conditional Rendering","React Form Handling","API Integration","Routes"]
     },
-    {
-        name:"JavaScript",
-        category:"Frontend"
-    },
-    {
-        name:"React",
-        category:"Frontend"
-    },
-    {
-        name:"TypeScript",
-        category:"Frontend"
-    },
-    {
-        name:"Tailwind CSS",
-        category:"Frontend"
+    developmentPractices:{
+        header:"Development Practices",
+        practices:["Responsive Web Design","Component-Based Architecture","Frontend Architecture","Reusable Components","Separation of Concerns","Clean Code","Followed Web Accessibility Standards","Git & GitHub"]
     }
+   }
 ]
