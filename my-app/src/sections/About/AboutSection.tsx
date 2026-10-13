@@ -39,7 +39,7 @@ export default function AboutSection(){
                     {
                         myBackground.map(backgroundData=>{
                             return(
-                                <article className="p-6  first:border-b border-gray-300  sm:nth-[2]:border-l nth-[2]:border-b nth-[3]:border-b sm:nth-[3]:border-b-0   sm:last:border-l ">
+                                <article className="p-6  first:border-b border-gray-300  sm:nth-[2]:border-l nth-[2]:border-b nth-[3]:border-b sm:nth-[3]:border-b-0   sm:last:border-l " key={crypto.randomUUID()}>
                                     <p className="text-gray-400 uppercase text-[10px] tracking-[0.1rem]">{backgroundData.label}</p>
                                     <h3 className="text-lg mt-3">{backgroundData.header}</h3>
                                     <p className="mt-3 text-sm text-gray-500 leading-relaxed">{backgroundData.content}</p>

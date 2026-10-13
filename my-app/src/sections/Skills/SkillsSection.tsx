@@ -10,8 +10,8 @@ export default function SkillsSection(){
                       {
                         skillsDetails.map((skill)=>{
                             return(
-                                <div className="mt-10 grid md:grid-cols-3">
-                                    <div className="p-6 h-93 border-gray-300 sm:border-r">
+                                <div className="mt-10 grid md:grid-cols-3" key={crypto.randomUUID()}>
+                                    <div className="px-0 py-6 sm:p-6 h-auto sm-93 border-gray-300 border-b md:border-b-0 border-r-0 md:border-r">
                                         <h3 className="border-b border-gray-300 text-base pb-5 font-semibold">{skill.skills.header}</h3>
                                         <ul className="mt-5 flex flex-wrap gap-2">
                                             {
@@ -21,22 +21,22 @@ export default function SkillsSection(){
                                             }
                                         </ul>
                                     </div>
-                                    <div>
-                                        <h3>{skill.reactDevelopment.header}</h3>
-                                        <ul>
+                                    <div className="px-0 py-5 md:p-5 border-gray-300 border-b md:border-b-0 border-r-0 md:border-r">
+                                        <h3 className="border-b border-gray-300 px-0 pb-5 sm:pb-5 text-base font-medium">{skill.reactDevelopment.header}</h3>
+                                        <ul className="mt-5 flex flex-wrap gap-2">
                                             {
                                                 skill.reactDevelopment.react.map(development=>{
-                                                    return<li key={crypto.randomUUID()}>{development}</li>
+                                                    return<li className=" text-[11.2px] text-gray-500 border border-gray-300 py-[4.8px] px-[9.6px]" key={crypto.randomUUID()}>{development}</li>
                                                 })
                                             }
                                         </ul>
                                     </div>
-                                    <div>
-                                        <h3>{skill.developmentPractices.header}</h3>
-                                        <ul>
+                                    <div className="px-0 py-5 md:p-5">
+                                        <h3 className="border-b border-gray-300 px-0 pb-5 sm:pb-5 text-base font-medium">{skill.developmentPractices.header}</h3>
+                                        <ul className="mt-5 flex flex-wrap gap-2">
                                             {
                                                 skill.developmentPractices.practices.map(practices=>{
-                                                    return<li key={crypto.randomUUID()}>{practices}</li>
+                                                    return<li className="text-[11.2px] text-gray-500 border border-gray-300 py-[4.8px] px-[9.6px]" key={crypto.randomUUID()}>{practices}</li>
                                                 })
                                             }
                                         </ul>
@@ -45,7 +45,7 @@ export default function SkillsSection(){
                             );
                         })
                        }
-                      <p>Skills represent practical, applied knowledge built through projects — not self-rated percentages.</p>
+                      <p className="text-[11.2px] text-gray-500 mt-10 pt-6 border-t border-gray-300">Skills represent practical, applied knowledge built through projects — not self-rated percentages.</p>
                 </div>
         </section>
     );
