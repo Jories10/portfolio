@@ -40,7 +40,7 @@ function Herosection() {
                     <span>PORTFOLIO 2026</span>
                     <button type="button" className="flex items-center gap-1.5 cursor-pointer">
                         SCROLL TO EXPLORE
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-down h-3 w-3 align-middle" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-down h-3 w-3 align-middle" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
                     </button>
                 </div>
             </div>
