@@ -4,7 +4,7 @@ import coffee from "../../assets/images/coffee.png";
 export default function ProjectSection(){
     return(
         <section id="projects">
-            <div className="mx-auto w-full max-w-6xl px-8 py-32">
+            <div className="mx-auto w-full max-w-6xl px-8 py-32 border-b border-gray-300">
                 <div className="flex justify-between items-end">
                     <p className="uppercase text-gray-400 text-[10px] tracking-[0.1rem]">projects</p>
                     <h2 className="mt-3 text-4xl font-medium tracking-tight  sm:text-5xl">Proof of work.</h2>
