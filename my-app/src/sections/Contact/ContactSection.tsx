@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import mobileNoIcon from "../../assets/icons/telephone.png";
 
 export default function ContactSection(){
@@ -17,14 +17,27 @@ export default function ContactSection(){
 
     const data = await response.json();
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Form Submitted Successfully!");
       event.target.reset();
     } else {
       setResult("Error");
     }
   };
+
+  useEffect(()=>{
+        let timeout:number;
+        const resetResult = ()=>{
+                timeout = setTimeout(()=>{
+                    setResult("");
+                },3000);
+        }
+        resetResult();
+
+        return ()=>(clearTimeout(timeout));
+  },[result]);
+
     return (
-        <section>
+        <section id="contact">
             <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 py-32 border-b border-gray-300 grid lg:grid-cols-[1fr_2fr] gap-12">
                 <div>
                     <p className="uppercase text-gray-400 text-[10px] tracking-[0.2rem] font-medium">contact</p>
@@ -49,7 +62,7 @@ export default function ContactSection(){
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className="relative">
                     <form onSubmit={onSubmit} className="space-y-5">
                         <fieldset className="mt-2 mb-5 flex flex-col">
                             <label className="text-gray-400 uppercase text-[10px] tracking-[0.2rem]" htmlFor="name">name</label>
@@ -70,8 +83,7 @@ export default function ContactSection(){
                             </button>
                         </fieldset>
                     </form>
-                    <p className="mt-5 font-medium text-lg bg-gray-200 p-4 text-green-700 max-w-80 tracking-wider">{result}
-                        
+                    <p className={`${!result ? "hidden":"block"} absolute -top-40 -right-5 mt-5 font-medium text-lg bg-gray-200 px-4 py-1 text-green-700 max-w-80 tracking-wider rounded z-20`}>{result}
                     </p>
                 </div>
             </div>
