@@ -38,7 +38,7 @@ export default function ContactSection(){
 
     return (
         <section id="contact">
-            <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 py-32 border-b border-gray-300 grid lg:grid-cols-[1fr_2fr] gap-12">
+            <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 py-32 border-gray-300 grid lg:grid-cols-[1fr_2fr] gap-12">
                 <div>
                     <p className="uppercase text-gray-400 text-[10px] tracking-[0.2rem] font-medium">contact</p>
                     <h2 className="mt-3 text-5xl font-medium tracking-tight sm:text-5xl">Get in touch</h2>
