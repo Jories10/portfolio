@@ -1,6 +1,7 @@
 import DownloadResumButton from "../../components/Buttons/DownloadResumeButton";
 import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Developer.pdf";
 
+
 function Herosection() {
     const techListSkills:string = "border border-gray-300 px-[9.6px] py-[4.8px]";
 
@@ -39,8 +40,8 @@ function Herosection() {
 
                 <div className="flex justify-between items-center mt-8 border-t border-gray-300 py-6 text-[10px] text-gray-400 tracking-[0.2rem]">
                     <span>PORTFOLIO 2026</span>
-                    <button type="button" className="flex items-center gap-1.5 cursor-pointer">
-                        SCROLL TO EXPLORE
+                    <button type="button" className="flex items-center gap-1.5 cursor-pointer hover:text-black">
+                        <a href="#about">scroll to explore</a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-down h-3 w-3 align-middle" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
                     </button>
                 </div>

@@ -1,7 +1,12 @@
 import DownloadResumeButton from "../Buttons/DownloadResumeButton";
 import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Developer.pdf";
-
+import useScrollSpy from "../../hooks/useScrollSpy";
+import sectionIds from "../../sections/sectionIds";
+import sectionIdFormatLabel from "../../utils/sectionIdFormatLabel";
 export default function Footer(){
+    const sectionId = sectionIds();
+    const activeSection = useScrollSpy(sectionId);
+    
     return(
         <footer className="border-t border-gray-300 mx-auto w-full max-w-6xl">
             <div className="py-12 px-5 sm:px-8">
@@ -16,11 +21,15 @@ export default function Footer(){
                             <h4 className="text-[10px] uppercase text-gray-600 font-medium tracking-[3px]">nivigation</h4>
                             <nav>
                                 <ul className="mt-4 text-sm capitalize text-gray-500">
-                                    <li className="mb-2 cursor-pointer hover:text-black">home</li>
-                                    <li className="mb-2 cursor-pointer hover:text-black">about</li>
-                                    <li className="mb-2 cursor-pointer hover:text-black">skills</li>
-                                    <li className="mb-2 cursor-pointer hover:text-black">projects</li>
-                                    <li className="cursor-pointer hover:text-black">contact</li>
+                                    {
+                                       sectionId.map((id)=>{
+                                        return (
+                                            <li key={id} className="mb-2 cursor-pointer hover:text-black last:mb-0">
+                                                <a href={`#${id}`} aria-current={activeSection === id ? "location":undefined} className={activeSection === id ? "active" : ""}>{sectionIdFormatLabel(id)}</a>
+                                            </li>
+                                        )
+                                       })
+                                    }
                                 </ul>
                             </nav>
                         </div>
@@ -28,10 +37,12 @@ export default function Footer(){
                             <h4 className="text-[10px] uppercase text-gray-600 font-medium tracking-[3px]">social</h4>
                             <ul className="mt-4 text-sm capitalize text-gray-500">
                                 <li className="mb-2 cursor-pointer hover:text-black">
-                                    <a href="">GitHub</a>
+                                    <a href="https://github.com/Jories10" target="_blank">GitHub</a>
                                 </li>
                                 <li className="cursor-pointer hover:text-black">
-                                    <a href="">Linked</a>
+                                    <a href="https://www.linkedin.com/in/
+mrdiscipline
+" target="_blank">Linked</a>
                                 </li>
                             </ul>
                         </div>

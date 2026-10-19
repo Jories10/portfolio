@@ -4,6 +4,9 @@
     font-family: "Instruments Sans", sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     max-width: 100%;
