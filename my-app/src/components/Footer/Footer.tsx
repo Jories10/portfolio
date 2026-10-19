@@ -1,7 +1,10 @@
+import DownloadResumeButton from "../Buttons/DownloadResumeButton";
+import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Developer.pdf";
+
 export default function Footer(){
     return(
-        <footer className="border-t border-gray-300">
-            <div className="py-12 px-8">
+        <footer className="border-t border-gray-300 mx-auto w-full max-w-6xl">
+            <div className="py-12 px-5 sm:px-8">
                <div className="flex justify-between flex-col sm:flex-row gap-10">
                      <div className="max-w-xs">
                         <h3 className="font-medium text-[1rem]">Mr.Discipline</h3>
@@ -36,10 +39,7 @@ export default function Footer(){
                </div>
                 <div className="mt-12 pt-6 flex items-center justify-between">
                         <p className="text-gray-400 text-[11.2px] tracking-[0.1rem] font-medium">© 2026 Mr.Discipline. All rights reserved.</p>
-                        <p className="flex items-center justify-center gap-1.5 text-[11.2px] text-gray-400 capitalize tracking-[0.1rem] cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download h-3 w-3" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
-                            download resume
-                        </p>
+                        <DownloadResumeButton style="flex items-center justify-center gap-1.5 text-[11.2px] text-gray-400 capitalize tracking-[0.1rem] cursor-pointer hover:text-black" content="download resume" url={resume}/>
                 </div>
             </div>
         </footer>

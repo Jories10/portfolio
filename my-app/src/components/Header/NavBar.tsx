@@ -1,6 +1,7 @@
 import {useState} from "react";
 import BurgerMenuButton from "../Buttons/BurgerMenuButton";
 import DownloadResumButton from "../Buttons/DownloadResumeButton";
+import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Developer.pdf";
 
 export default function NavBar(){
   const [isOpenNav,setIsOpenNav] = useState(false);
@@ -33,12 +34,12 @@ export default function NavBar(){
                     <a href="#contact">Contact</a>
                 </li>
                 <li>
-                    <DownloadResumButton content={
+                    <DownloadResumButton style="flex items-center justify-center gap-x-1 w-full min-[450px]:w-auto text-gray-950 border border-gray-950 py-3 px-5 pointer hover:bg-gray-950 hover:text-gray-50 transition-colors ease-linear duration-200 pointer" content={
                        <>
                         <span className="sm:hidden">Download Resume</span>
                         <span className="hidden sm:inline">Resume</span>
                        </>
-                    }/>
+                    } url={resume}/>
                 </li>
             </ul>
         </nav>

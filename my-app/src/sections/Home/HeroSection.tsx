@@ -1,4 +1,5 @@
 import DownloadResumButton from "../../components/Buttons/DownloadResumeButton";
+import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Developer.pdf";
 
 function Herosection() {
     const techListSkills:string = "border border-gray-300 px-[9.6px] py-[4.8px]";
@@ -20,7 +21,7 @@ function Herosection() {
                         <span>view projects </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </button>
-                    <DownloadResumButton content="Download Resume"/>
+                    <DownloadResumButton style="flex items-center justify-center gap-x-1 w-full min-[450px]:w-auto text-gray-950 border border-gray-950 py-3 px-5 pointer hover:bg-gray-950 hover:text-gray-50 transition-colors ease-linear duration-200 pointer" content="Download Resume" url={resume}/>
                 </div>
 
                 <div className="mt-10">
