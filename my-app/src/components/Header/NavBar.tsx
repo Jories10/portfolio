@@ -5,6 +5,7 @@ import resume from "../../assets/resume/Jories_Condat_Junior_Frontend_React_Deve
 import useScrollSpy from "../../hooks/useScrollSpy";
 import sectionIds from "../../sections/sectionIds";
 import sectionIdFormatLabel from "../../utils/sectionIdFormatLabel";
+
 export default function NavBar(){
   const [isOpenNav,setIsOpenNav] = useState(false);
   const navItemClass = "pointer hover:text-gray-950 transition-colors duration-300 ease";
